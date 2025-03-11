@@ -1,0 +1,93 @@
+/* ProgramCard.css */
+.program-card {
+    background-color: var(--light-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px; /* DITAMBAHKAN: Untuk membuat ukuran card sama */
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #e8f0fe;
+    padding: 1.5rem;
+    min-height: 7rem; /* DITAMBAHKAN: Untuk membuat tinggi header sama */
+    border-bottom: 1px solid #e0e0e0;
+    display: flex; /* Enable flex layout for header content */
+    align-items: center; /* Vertically align icon and title */
+}
+
+.program-icon {
+    font-size: 2rem; /* Ukuran ikon header */
+    margin-right: 1rem; /* Spasi antara ikon dan judul */
+    color: var(--primary-color); /* Warna ikon utama */
+}
+
+.program-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0;
+}
+
+.card-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ubah ke flex-start agar konten dimulai dari atas */
+}
+
+.program-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+    text-align: left;
+    margin-bottom: 1rem; /* Tambahkan margin bottom agar ada jarak dengan info date/status */
+}
+
+.program-date {
+    border-top: 1px dashed #ccc;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    color: #777;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 0.5rem; /* Add margin to separate date and status */
+    margin-top: auto;
+}
+
+.program-status {
+    font-size: 0.9rem;
+    color: #777;
+    display: flex;
+    align-items: center;
+}
+
+.icon-date,
+.icon-status {
+    margin-right: 0.5rem;
+    color: var(--secondary-color); /* Warna ikon sekunder */
+}
+
+.status-selesai {
+    color: #4caf50; /* Warna hijau untuk status selesai */
+}
+
+.status-sedang-berlangsung {
+    color: #ffc107; /* Warna kuning/emas untuk status sedang berlangsung */
+}
+
+.status-direncanakan {
+    color: #2196f3; /* Warna biru untuk status direncanakan */
+}

@@ -1,0 +1,123 @@
+.ekskul-card {
+    background-color: var(
+        --light-color
+    ); /* Menggunakan variabel tema untuk background */
+    border-radius: 1rem; /* Nilai yang sama dengan desain Anda */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Nilai yang sama dengan desain Anda */
+    overflow: hidden; /* Nilai yang sama dengan desain Anda */
+    display: flex; /* Nilai yang sama dengan desain Anda */
+    flex-direction: column; /* Nilai yang sama dengan desain Anda */
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease; /* Transisi hover tetap */
+    min-height: 600px;
+}
+
+.ekskul-card:hover {
+    transform: translateY(-5px); /* Efek hover tetap */
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15); /* Box shadow lebih kuat saat hover */
+}
+
+.ekskul-image-container {
+    /* Diubah dari .image-container agar lebih spesifik */
+    width: 100%;
+    height: 16rem; /* Nilai yang sama dengan desain Anda */
+    overflow: hidden; /* Nilai yang sama dengan desain Anda */
+}
+
+.ekskul-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Nilai yang sama dengan desain Anda */
+    display: block; /* Mencegah space extra di bawah gambar */
+}
+
+.card-body {
+    /* Menggunakan .card-body dari Bootstrap untuk padding dan layout, menggantikan .card-content */
+    padding: 2rem; /* Nilai yang sama dengan desain Anda (.card-content padding) */
+    display: flex; /* Nilai yang sama dengan desain Anda (.card-content display) */
+    flex-direction: column; /* Nilai yang sama dengan desain Anda (.card-content flex-direction) */
+    flex-grow: 1; /* Memastikan card-body mengisi ruang yang tersisa dalam card */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Distribute space between elements */
+}
+
+.ekskul-title {
+    font-size: 1.5rem; /* Nilai yang sama dengan desain Anda */
+    font-weight: bold; /* Nilai yang sama dengan desain Anda */
+    margin-bottom: 1rem; /* Nilai yang sama dengan desain Anda */
+    color: #136f63; /* Warna tema utama, Nilai yang sama dengan desain Anda */
+}
+
+.ekskul-content-wrapper {
+    /* Diubah dari .content-wrapper agar lebih spesifik */
+    max-height: 150px; /* Nilai yang sama dengan desain Anda */
+    position: relative; /* Nilai yang sama dengan desain Anda */
+    overflow: hidden; /* Nilai yang sama dengan desain Anda */
+}
+
+.ekskul-description {
+    color: #4b5563; /* Nilai yang sama dengan desain Anda */
+    line-height: 1.625; /* Nilai yang sama dengan desain Anda */
+    font-size: 1rem; /* Pastikan ukuran font sesuai atau sesuaikan */
+}
+
+.fade-overlay {
+    /* Nilai yang sama dengan desain Anda */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px; /* Nilai yang sama dengan desain Anda */
+    background: linear-gradient(
+        transparent,
+        var(--light-color)
+    ); /* Menggunakan variabel tema untuk background fade, disesuaikan dengan background card */
+}
+
+.ekskul-tags {
+    /* Nilai yang sama dengan desain Anda */
+    margin-top: 1rem; /* Sedikit diubah agar ada jarak dengan deskripsi */
+    padding: 1rem 2rem; /* Nilai yang sama dengan desain Anda */
+    display: flex;
+    gap: 0.5rem; /* Nilai yang sama dengan desain Anda */
+    justify-content: flex-start; /* Agar tags rata kiri */
+    flex-wrap: wrap; /* Agar tags wrap jika terlalu banyak */
+}
+
+.ekskul-tag {
+    background-color: #22aaa1; /* Warna tema sekunder, Nilai yang sama dengan desain Anda */
+    color: white; /* Nilai yang sama dengan desain Anda */
+    padding: 0.25rem 0.75rem; /* Nilai yang sama dengan desain Anda */
+    border-radius: 9999px; /* Nilai yang sama dengan desain Anda */
+    font-size: 0.875rem; /* Nilai yang sama dengan desain Anda */
+    white-space: nowrap; /* Mencegah tag wrap text */
+}
+.ekskul-schedule {
+    margin-top: 1.5rem; /* Lebih banyak jarak dari deskripsi */
+    padding-top: 1rem;
+    border-top: 1px dashed #ccc; /* Garis putus-putus sebagai pemisah */
+    display: flex;
+    flex-direction: column; /* Stack info jadwal */
+    gap: 0.5rem; /* Spasi antar item jadwal */
+}
+
+.ekskul-schedule p {
+    margin-bottom: 0; /* Hilangkan margin bawah default p */
+    font-size: 0.9rem;
+    color: #777; /* Warna teks lebih lembut */
+    display: flex;
+    align-items: center; /* Vertikal align ikon dan teks */
+    gap: 0.3rem; /* Spasi antara ikon dan teks */
+}
+
+.ekskul-schedule i {
+    color: var(--primary-color); /* Warna ikon jadwal (tema utama) */
+    font-size: 1rem; /* Ukuran ikon sedikit lebih besar */
+}
+
+.ekskul-schedule span.font-weight-bold {
+    font-weight: 600; /* Tebalkan label "Hari" dan "Waktu" */
+    color: #555; /* Warna label sedikit lebih gelap */
+}
