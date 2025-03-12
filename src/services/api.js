@@ -1,7 +1,7 @@
 // src/services/api.js
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3000"; // Base URL should point to the root of the public directory
+const BASE_URL = window.location.origin; // Base URL should point to the root of the public directory
 
 export const getNavbar = async () => {
   try {
