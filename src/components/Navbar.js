@@ -102,7 +102,7 @@ function Navbar() {
             <span className="brand-text">SIE 1 KETAQWAAN</span>
             <span className="d-none d-sm-inline">MAN 1 JEMBER</span>
           </Link>
-          <ul className="navbar-nav ml-auto">
+          <ul className="navbar-nav">
             <li className="nav-item">
               <a href="#beranda" className="nav-link">
                 <i className="fas fa-home nav-icon"></i>
@@ -193,7 +193,7 @@ function Navbar() {
             </button>
           </div>
 
-          <ul className="navbar-nav ml-auto">
+          <ul className="navbar-nav">
             {navItems.map((item) => (
               <li
                 key={item.id}
