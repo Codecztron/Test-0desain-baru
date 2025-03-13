@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getStruktur } from "../services/api";
+import { getStruktur } from "../services/api/user/APIStructureSection";
 import "../styles/StructureSection.css";
 
 function StructureSection() {

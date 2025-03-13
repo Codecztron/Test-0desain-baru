@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getProgramKerja } from "../services/api";
+import { getProgramKerja } from "../services/api/user/APIProgramKerjaSection";
 import ProgramCard from "./ProgramCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";

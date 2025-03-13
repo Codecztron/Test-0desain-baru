@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getKegiatan } from "../services/api"; // Asumsi API endpoint
+import { getKegiatan } from "../services/api/user/APIKegiatanSection"; // Asumsi API endpoint
 import KegiatanCard from "./KegiatanCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";

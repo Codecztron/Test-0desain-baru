@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getEkskul } from "../services/api";
+import { getEkskul } from "../services/api/user/APIEkskulSection";
 import EkskulCard from "./EkskulCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";

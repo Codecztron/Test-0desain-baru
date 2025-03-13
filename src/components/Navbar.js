@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import "../styles/Navbar.css";
-import { getNavbar } from "../services/api";
+import { getNavbar } from "../services/api/user/APINavbar";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

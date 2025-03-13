@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getHeroData } from "../services/api";
+import { getHeroData } from "../services/api/user/APIHeroSection";
 import "../styles/HeroSection.css";
 
 function HeroSection() {
@@ -87,7 +87,7 @@ function HeroSection() {
         <div className={`hero-content ${isVisible ? "fade-in" : ""}`}>
           <div className="logo-container">
             <img
-              src={heroData.HerologoSie1}
+              src={heroData.HeroLogoSie1}
               alt={heroData.HeroDeskripsiLogoSie1}
               className="hero-logo pulse"
             />

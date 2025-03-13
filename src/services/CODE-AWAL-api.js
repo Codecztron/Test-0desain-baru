@@ -5,7 +5,7 @@ const BASE_URL = window.location.origin;
 
 export const getNavbar = async () => {
   try {
-    const response = await axios.get(`${BASE_URL}/data.json`);
+    const response = await axios.get(`${BASE_URL}/data/data.json`);
     return response.data.navbar; // Ubah dari struktur ke navbar
   } catch (error) {
     console.error("Error fetching navbar:", error);
@@ -15,7 +15,7 @@ export const getNavbar = async () => {
 
 export const getHeroData = async () => {
   try {
-    const response = await axios.get(`${BASE_URL}/data.json`);
+    const response = await axios.get(`${BASE_URL}/data/data.json`);
     return response.data.heroSection;
   } catch (error) {
     console.error("Error fetching hero data:", error);
@@ -25,7 +25,7 @@ export const getHeroData = async () => {
 
 export const getStruktur = async () => {
   try {
-    const response = await axios.get(`${BASE_URL}/data.json`);
+    const response = await axios.get(`${BASE_URL}/data/data.json`);
     return response.data.struktur;
   } catch (error) {
     console.error("Failed to fetch struktur data:", error);
@@ -35,7 +35,7 @@ export const getStruktur = async () => {
 
 export const getProgramKerja = async () => {
   try {
-    const response = await axios.get(`${BASE_URL}/data.json`);
+    const response = await axios.get(`${BASE_URL}/data/data.json`);
     return response.data.programKerja;
   } catch (error) {
     console.error("Error fetching program kerja:", error);
@@ -45,7 +45,7 @@ export const getProgramKerja = async () => {
 
 export const getKegiatan = async () => {
   try {
-    const response = await axios.get(`${BASE_URL}/data.json`);
+    const response = await axios.get(`${BASE_URL}/data/data.json`);
     return response.data.kegiatan;
   } catch (error) {
     console.error("Error fetching kegiatan: ", error);
@@ -55,7 +55,7 @@ export const getKegiatan = async () => {
 
 export const getEkskul = async () => {
   try {
-    const response = await axios.get(`${BASE_URL}/data.json`);
+    const response = await axios.get(`${BASE_URL}/data/data.json`);
     return response.data.ekskul;
   } catch (error) {
     console.error("Error fetching ekskul: ", error);
@@ -65,7 +65,7 @@ export const getEkskul = async () => {
 
 export const getInformasi = async () => {
   try {
-    const response = await axios.get(`${BASE_URL}/data.json`);
+    const response = await axios.get(`${BASE_URL}/data/data.json`);
     return response.data.informasi;
   } catch (error) {
     console.error("Error fetching informasi: ", error);
@@ -75,7 +75,7 @@ export const getInformasi = async () => {
 
 export const getAnggota = async () => {
   try {
-    const response = await axios.get(`${BASE_URL}/data.json`);
+    const response = await axios.get(`${BASE_URL}/data/data.json`);
     return response.data.anggotaKetaqwaan;
   } catch (error) {
     console.error("Error fetching anggota ketaqwaan: ", error);
