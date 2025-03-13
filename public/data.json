@@ -16,24 +16,24 @@
     "NavbarCopyRight": "© 2025 SIE 1 KETAQWAAN MAN 1 JEMBER"
   },
   "heroSection": {
-    "logoPath": "/image-index/ketaqwaan-logo.png",
-    "logoAlt": "Logo SIE 1 Ketaqwaan MAN 1 Jember",
-    "welcomeText": "Selamat Datang di",
-    "primaryText": "SIE 1 KETAQWAAN",
-    "secondaryText": "MAN 1 JEMBER",
-    "description": "Membentuk Generasi Berakhlak dan Bertaqwa Melalui Program Keagamaan yang Inovatif dan Inspiratif",
-    "stats": [
+    "HeroLogoSie1": "/image-index/ketaqwaan-logo.png",
+    "HeroDeskripsiLogoSie1": "Logo SIE 1 Ketaqwaan MAN 1 Jember",
+    "HeroWelcomeText": "Selamat Datang di",
+    "HeroPrimaryText": "SIE 1 KETAQWAAN",
+    "HeroSecondaryText": "MAN 1 JEMBER",
+    "HeroDescription": "Membentuk Generasi Berakhlak dan Bertaqwa Melalui Program Keagamaan yang Inovatif dan Inspiratif",
+    "HeroInforSie1": [
       {
-        "number": 20,
-        "label": "Program Kerja"
+        "HeroTotalProker": 20,
+        "HeroDeskripsiProker": "Program Kerja"
       },
       {
-        "number": 3,
-        "label": "Ekstrakurikuler"
+        "HeroTotalEkskul": 3,
+        "HeroDeskripsiEkskul": "Ekstrakurikuler"
       },
       {
-        "number": 100,
-        "label": "Anggota"
+        "HeroTotalAnggota": 100,
+        "HeroDeskripsiAnggota": "Anggota"
       }
     ],
     "cta": [

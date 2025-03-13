@@ -87,26 +87,28 @@ function HeroSection() {
         <div className={`hero-content ${isVisible ? "fade-in" : ""}`}>
           <div className="logo-container">
             <img
-              src={heroData.logoPath}
-              alt={heroData.logoAlt}
+              src={heroData.HerologoSie1}
+              alt={heroData.HeroDeskripsiLogoSie1}
               className="hero-logo pulse"
             />
           </div>
 
           <div className="text-content">
             <h1 className="hero-title">
-              <span className="welcome-text">{heroData.welcomeText}</span>
-              <span className="primary-text">{heroData.primaryText}</span>
-              <span className="secondary-text">{heroData.secondaryText}</span>
+              <span className="welcome-text">{heroData.HeroWelcomeText}</span>
+              <span className="primary-text">{heroData.HeroPrimaryText}</span>
+              <span className="secondary-text">
+                {heroData.HeroSecondaryText}
+              </span>
             </h1>
 
-            <p className="hero-description">{heroData.description}</p>
+            <p className="hero-description">{heroData.HeroDescription}</p>
 
             <div className="hero-stats">
-              {heroData.stats.map((stat, index) => (
+              {heroData.HeroInforSie1.map((stat, index) => (
                 <div className="stat-item" key={index}>
-                  <span className="stat-number">{stat.number}</span>
-                  <span className="stat-label">{stat.label}</span>
+                  <span className="stat-number">{Object.values(stat)[0]}</span>
+                  <span className="stat-label">{Object.values(stat)[1]}</span>
                 </div>
               ))}
             </div>

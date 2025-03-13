@@ -17,7 +17,7 @@ const KegiatanCard = ({ kegiatan }) => {
         <p className="kegiatan-description">{description}</p>
 
         {date && (
-          <p className="card-text mb-1">
+          <p className="card-text">
             <i className="far fa-calendar-alt mr-2"></i>{" "}
             <span className="font-weight-bold">Tanggal:</span> {date}
           </p>
