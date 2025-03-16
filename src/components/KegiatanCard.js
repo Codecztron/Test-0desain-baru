@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/KegiatanCard.css";
+import "../styles/components/KegiatanCard.css";
 
 const KegiatanCard = ({ kegiatan }) => {
   if (!kegiatan) {

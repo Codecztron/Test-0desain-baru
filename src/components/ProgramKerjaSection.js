@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-import "../styles/ProgramKerjaSection.css";
+import "../styles/components/ProgramKerjaSection.css";
 
 function ProgramKerjaSection() {
   const [programKerja, setProgramKerja] = useState([]);
