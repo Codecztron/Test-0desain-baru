@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/SaranSection.css"; // Import the CSS file
+import "../styles/components/SaranSection.css"; // Import the CSS file
 
 function SaranSection() {
   return (

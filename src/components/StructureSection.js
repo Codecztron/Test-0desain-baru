@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getStruktur } from "../services/api/user/APIStructureSection";
-import "../styles/StructureSection.css";
+import "../styles/components/StructureSection.css";
 
 function StructureSection() {
   const [struktur, setStruktur] = useState(null);

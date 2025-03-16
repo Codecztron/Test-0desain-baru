@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getHeroData } from "../services/api/user/APIHeroSection";
-import "../styles/HeroSection.css";
+import "../styles/components/HeroSection.css";
 
 function HeroSection() {
   const [heroData, setHeroData] = useState(null);

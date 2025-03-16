@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/EkskulCard.css"; // Import CSS kustom untuk sedikit styling card
+import "../styles/components/EkskulCard.css"; // Import CSS kustom untuk sedikit styling card
 
 const EkskulCard = ({ ekskul }) => {
   if (!ekskul) {

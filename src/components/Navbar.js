@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Tetap import useNavigate
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import "../styles/Navbar.css";
+import "../styles/components/Navbar.css";
 import { getNavbar } from "../services/api/user/APINavbar";
 
 function Navbar() {
@@ -12,8 +12,9 @@ function Navbar() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navbarRef = useRef(null);
+  const navigate = useNavigate(); // Tetap inisialisasi useNavigate
 
-  // Fetch navbar data
+  // ... (useEffect dan fungsi-fungsi lain tetap sama) ...
   useEffect(() => {
     const fetchNavbarData = async () => {
       try {
@@ -74,11 +75,26 @@ function Navbar() {
   }, [isOpen]);
 
   const handleLinkClick = (linkName) => {
-    setActiveLink(linkName);
+    if (linkName === "admin") {
+      const isLoggedIn = localStorage.getItem("isLoggedIn");
+      if (isLoggedIn === "true") {
+        navigate(process.env.WEB_SIE1_ADMIN_ROUTE); //  ke dashboard jika sudah login
+      } else {
+        navigate("/login"); //  ke login jika belum
+      }
+    } else {
+      setActiveLink(linkName);
+      const element = document.getElementById(linkName);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
     setIsOpen(false);
   };
 
-  // Render loading state
+  // ... (Loading dan error handling) ...
+
+  // ... (Loading dan Error handling tetap sama) ...
   if (loading) {
     return (
       <nav className="navbar navbar-loading">
@@ -109,13 +125,22 @@ function Navbar() {
                 <span>Beranda</span>
               </a>
             </li>
+            <li className="nav-item">
+              <Link
+                to={`${process.env.WEB_SIE1_ADMIN_ROUTE}/*`}
+                className="nav-link"
+              >
+                <i className="fas fa-user-shield nav-icon"></i>
+                <span>Admin</span>
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
     );
   }
 
-  // Define navigation items dynamically from JSON data
+  // Define navigation items (Kembali ke semula, tapi dengan isButton)
   const navItems = [
     { id: "beranda", icon: "fas fa-home", label: navbarData.NavbarHome },
     {
@@ -148,7 +173,6 @@ function Navbar() {
     },
   ];
 
-  // Main navbar rendering
   return (
     <nav
       ref={navbarRef}
@@ -161,7 +185,7 @@ function Navbar() {
           <i className="fas fa-mosque mr-2"></i>
           <span className="brand-text">{navbarData.NavbarJudul}</span>
           <span className="d-none d-sm-inline">
-            &nbsp;{navbarData.NavbarSekolah}
+             {navbarData.NavbarSekolah}
           </span>
         </Link>
 
@@ -200,15 +224,13 @@ function Navbar() {
                 className={`nav-item ${activeLink === item.id ? "active" : ""}`}
               >
                 <a
-                  href={`#${item.id}`}
+                  href={item.id === "admin" ? undefined : `#${item.id}`} // Cek admin
                   className={`nav-link ${item.isButton ? "btn-admin" : ""}`}
                   onClick={(e) => {
-                    e.preventDefault();
-                    handleLinkClick(item.id);
-                    const element = document.getElementById(item.id);
-                    if (element) {
-                      element.scrollIntoView({ behavior: "smooth" });
+                    if (item.id !== "admin") {
+                      e.preventDefault(); // Hanya preventDefault jika bukan admin
                     }
+                    handleLinkClick(item.id);
                   }}
                 >
                   <i className={`${item.icon} nav-icon`}></i>
@@ -219,6 +241,7 @@ function Navbar() {
           </ul>
 
           <div className="mobile-menu-footer d-lg-none">
+            {/* ... (social icons dan footer text) ... */}
             <div className="social-icons">
               <a
                 href={navbarData.NavbarInstagramLink}
@@ -243,7 +266,6 @@ function Navbar() {
           </div>
         </div>
       </div>
-
       {/* Scroll progress indicator */}
       <div className="scroll-progress">
         <div

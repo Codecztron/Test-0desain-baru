@@ -1,0 +1,119 @@
+/* src/styles/admin/login/login.css */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(
+        to right,
+        #e0f7fa,
+        #b2ebf2
+    ); /* Light Teal Gradient Background */
+    padding: 20px; /* Added padding for smaller screens */
+}
+
+.login-card {
+    background-color: white;
+    padding: 30px; /* Reduced padding slightly for smaller screens */
+    border-radius: 16px;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px; /*  Keeps the max-width */
+    text-align: center;
+}
+
+.login-title {
+    font-size: 32px; /* Reduced font size for smaller screens */
+    font-weight: bold;
+    margin-bottom: 24px; /* Reduced margin slightly */
+    color: #136f63;
+}
+
+.login-error {
+    color: #e53e3e;
+    margin-bottom: 20px; /* Reduced margin slightly */
+    font-weight: 500;
+    font-size: 0.9rem; /* Slightly smaller font size on mobile */
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Reduced gap slightly */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-label {
+    font-weight: 600;
+    margin-bottom: 6px; /* Reduced margin slightly */
+    color: #4a5568;
+    font-size: 0.95rem; /* Slightly smaller on mobile */
+}
+
+.form-input {
+    padding: 12px 14px; /* Slightly reduced padding */
+    border-radius: 8px;
+    border: 2px solid #e2e8f0;
+    font-size: 1rem; /* Keep font size consistent */
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.3);
+}
+
+.login-button,
+.home-button {
+    padding: 12px 20px; /* Slightly reduced padding */
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    width: 100%; /* Make buttons full width on mobile */
+}
+
+.login-button {
+    background-color: #136f63;
+    color: white;
+}
+
+.login-button:hover {
+    background-color: #0c5149;
+    transform: scale(1.05);
+}
+
+.home-button-link {
+    text-decoration: none;
+    display: block;
+    margin-top: 12px; /* Increased margin for better spacing on mobile */
+}
+
+.home-button {
+    background-color: #cbd5e0;
+    color: #4a5568;
+}
+
+.home-button:hover {
+    background-color: #a0aec0;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Media Query for Very Small Screens */
+@media (max-width: 360px) {
+    .login-title {
+        font-size: 28px; /* Even smaller title */
+    }
+    .login-card {
+        padding: 20px; /*  Even less padding */
+    }
+}
