@@ -43,10 +43,8 @@ function EkskulSection() {
   return (
     <section id="ekskul" className="ekskul-section bg-light py-5">
       <div className="container">
-        <h2 className="text-center mb-3">{ekskul.EkskulJudul}</h2>
-        <p className="lead text-center text-muted mb-5">
-          {ekskul.EkskulDeskripsi}
-        </p>
+        <h2 className="section-title">{ekskul.EkskulJudul}</h2>
+        <p className="section-subtitle">{ekskul.EkskulDeskripsi}</p>
 
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
