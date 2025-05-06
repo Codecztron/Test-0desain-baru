@@ -19,6 +19,7 @@
     font-weight: 700;
     text-align: center;
     margin-bottom: 2rem;
+    color: #136f63;
 }
 
 .saran-description {
@@ -29,23 +30,19 @@
 
 .saran-button {
     display: inline-block;
-    background-color: #16a34a; /* bg-green-600 equivalent */
+    background-color: #136f63;
     color: white;
     padding: 1rem 2rem;
     border-radius: 0.5rem;
     font-size: 1.125rem;
     font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition:
         background-color 0.3s,
         box-shadow 0.3s;
-    box-shadow:
-        0 10px 15px -3px rgba(0, 0, 0, 0.1),
-        0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg equivalent */
 }
 
 .saran-button:hover {
-    background-color: #15803d; /* bg-green-700 equivalent */
-    box-shadow:
-        0 20px 25px -5px rgba(0, 0, 0, 0.1),
-        0 10px 10px -5px rgba(0, 0, 0, 0.04); /* shadow-xl equivalent */
+    background-color: #22aaa1;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
