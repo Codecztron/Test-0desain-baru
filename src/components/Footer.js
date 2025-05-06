@@ -84,11 +84,7 @@ function Footer() {
             <br />
             Kabupaten Jember, Jawa Timur 68131.
           </p>
-          <p className="footer-contact">
-            📞 0857-3156-5201 / 0851-4102-3076 <br />
-            WhatsApp: 0857-3156-5201 / 0851-4102-3076 <br />
-            Jika ada eror hubungi Admin yaaa🤩
-          </p>
+          <p className="footer-contact">Jika ada eror hubungi Admin yaaa🤩</p>
         </div>
       </div>
     </footer>
